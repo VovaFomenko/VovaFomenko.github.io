@@ -3,11 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Две кнопки</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Кнопки</title>
+    <style>
+        /* Стиль для красной кнопки */
+        .red-button {
+            background-color: red;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
-    <button id="button1">Кнопка 1</button>
-    <button id="button2">Кнопка 2</button>
+
+    <!-- Первая кнопка для открытия ссылки -->
+    <button onclick="window.open('https://vovafomenko.github.io/tect.html', '_blank')">Открыть ссылку</button>
+
+    <!-- Вторая кнопка, которая станет красной -->
+    <button id="colorButton" onclick="makeRed()">Сделать красной</button>
+
+    <script>
+        // Функция для изменения цвета кнопки
+        function makeRed() {
+            const button = document.getElementById('colorButton');
+            button.classList.add('red-button'); // Добавляем класс с красным стилем
+        }
+    </script>
+
 </body>
 </html>
